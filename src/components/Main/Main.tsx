@@ -48,8 +48,8 @@ const Main = (): ReactElement => {
               size="large"
               value={ratingValue}
               onChange={(e, newValue): void => {
-                setRatingValue(newValue ? newValue : 0);
-                props.setFieldValue("rating", newValue ? newValue : 0);
+                setRatingValue(Number(newValue));
+                props.setFieldValue("rating", newValue);
               }}
             />
 
